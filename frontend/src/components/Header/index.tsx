@@ -1,11 +1,11 @@
-import logo from '../../assets/img/logo.svg'
-import './styles.css'
+import logo from '../../assets/img/logo.svg';
+import './styles.css';
 
 function Header() {
     return (
         <header>
-            <div className="dsmeta-logo-container">
-                <img src={logo} alt="DSMeta" />
+            <div className="ajsalesreport-logo-container">
+                <img src={logo} alt="ajsalesreport" />
                 <h1>Sales Report</h1>
                 <p>
                     Desenvolvido por
@@ -16,4 +16,4 @@ function Header() {
     )
 }
 
-export default Header
+export default Header;
