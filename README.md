@@ -156,6 +156,88 @@ spring.h2.console.path=/h2-console
 spring.jpa.show-sql=false
 spring.jpa.properties.hibernate.format_sql=true
 ```
+## Considerações finais
+Como foi um projeto simples de demonstração de aplicação, o maior foco foi aplicar os conceitos de envio de SMS via Twilio, com isso, não houve necessidade de criar a camada DTO, segue imagem abaixo:
+
+![image](https://user-images.githubusercontent.com/100853329/179554539-763a4855-10f5-4647-ba6f-0ceb324e3a2e.png)
+
+## Dependências utilizadas
+Abaixo, as dependências utilizadas:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.7.1</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.ajunior</groupId>
+	<artifactId>ajsalesreport</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>ajsalesreport</name>
+	<description>This a sales report made by AJunior98</description>
+	<properties>
+		<java.version>17</java.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.twilio.sdk</groupId>
+			<artifactId>twilio</artifactId>
+			<version>8.31.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>6.1.1.Final</version>
+			<type>pom</type>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.1.0</version><!--$NO-MVN-MAN-VER$ -->
+			</plugin>
+		</plugins>
+	</build>
+</project>
+```
+
 ## Postman
 Abaixo a collection utilizada no Postman caso deseje testar as funcionalidades:
 https://www.getpostman.com/collections/0c2c71755a0a7d107e9f
