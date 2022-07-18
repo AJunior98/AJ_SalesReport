@@ -17,7 +17,7 @@ function handleClick(id: number) {
 
 function NotificationButton({ saleId }: Props) {
     return (
-        <div className="dsmeta-red-btn" onClick={() => handleClick(saleId)}>
+        <div className="ajsalesreport-red-btn" onClick={() => handleClick(saleId)}>
             <img src={icon} alt="Notificar" />
         </div>
     )
