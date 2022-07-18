@@ -1,11 +1,11 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+import NotificationButton from "../NotificationButton";
+import "./styles.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { Sale } from "../../models/sale";
+import { useEffect, useState } from "react";
+import axios from "axios";
 import { BASE_URL } from "../../utils/request";
-import NotificationButton from "../NotificationButton"
-import './styles.css';
+import { Sale } from "../../models/sale";
 
 function SalesCard() {
 
