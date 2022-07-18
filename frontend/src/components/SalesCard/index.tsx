@@ -1,4 +1,4 @@
-import NotificationButton from "../NotificationButton";
+import NotificationBtn from "../NotificationButton";
 import "./styles.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -75,7 +75,7 @@ function SalesCard() {
                                     <td>{sale.amount.toFixed(2)}</td>
                                     <td>
                                         <div className="ajsalesreport-red-btn-container">
-                                            <NotificationButton saleId={sale.id} />
+                                            <NotificationBtn saleId={sale.id} />
                                         </div>
                                     </td>
                                 </tr>
